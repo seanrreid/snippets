@@ -1,0 +1,8 @@
+@mixin desktop {
+  @include media($desktop) {
+    @content
+  }
+  .lt-ie9 & {
+    @content
+  }
+}
