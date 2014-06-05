@@ -1,18 +1,19 @@
 $max-width: em(940);
-$product-image-height: 200;
 
-// Colors
-$white: #fff;
-$black: #464646;
-$orange: #f48222;
-$gold: #a29062;
-$goldlt: #fee394;
-$goldltr: #FFE296;
-$golddk: #8f7f56;
-
-// Fonts
-$defont: Arial, "Helvetica Neue", Helvetica, sans-serif;
-$futura: "Futura W01 Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$futura_alt:    "Avenir Next W01 Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$futura_medium: "Futura W01 Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$futura_bold: "Futura W01 Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+/**
+* Vertical align anything with just 3 lines of CSS
+* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+**/
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/**
+USAGE:
+    .element p {
+        @extend %vertical-align;
+    }
+**/
