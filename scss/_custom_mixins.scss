@@ -6,10 +6,10 @@
     @content
   }
 }
-/**
-* Vertical align anything with just 3 lines of CSS
-* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
-**/
+/*  ------------------------
+    Vertical align anything with just 3 lines of CSS
+    http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+    -------------------------- */
 @mixin vertical-align {
   position: relative;
   top: 50%;
@@ -17,12 +17,12 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/**
-USAGE:
-   .element p {
+/*  ------------------------
+    USAGE:
+    .element p {
         @include vertical-align;
     }
-**/
+    -------------------------- */
 %vertical-align {
   position: relative;
   top: 50%;
@@ -30,9 +30,23 @@ USAGE:
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/**
-USAGE:
+/*  ------------------------
+    USAGE:
     .element p {
         @extend %vertical-align;
     }
-**/
+    -------------------------- */
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+/*  ------------------------
+    SOURCE: http://www.cssreflex.com/snippets/cross-browser-opacity-sass-mixin/
+    USAGE:
+
+  .faded-text {
+    @include opacity(0.8);
+  }
+  -------------------------- */
